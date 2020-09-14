@@ -7,7 +7,6 @@ services:
     restart: unless-stopped
     ports:
       - 8082:8080
-      - 8443:8443
     environment:
       PUBLIC_DNS: craftypixels.com
       ORGANISATION_UNIT: unit
