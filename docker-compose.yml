@@ -6,10 +6,10 @@ services:
     container_name: drawio
     restart: unless-stopped
     ports:
-      - 8080:8080
+      - 8082:8080
       - 8443:8443
     environment:
-      PUBLIC_DNS: domain
+      PUBLIC_DNS: craftypixels.com
       ORGANISATION_UNIT: unit
       ORGANISATION: org
       CITY: city
@@ -18,7 +18,7 @@ services:
       DRAWIO_GITLAB_URL: http://mygitlab.net
       DRAWIO_GITLAB_ID: change_to_your_app_id
     healthcheck:
-      test: ["CMD-SHELL", "curl -f http://domain:8080 || exit 1"]
+      test: ["CMD-SHELL", "curl -f https://craftypixels.com/flow-chart-creator || exit 1"]
       interval: 1m30s
       timeout: 10s
       retries: 5
